@@ -309,7 +309,7 @@ CONFIG_SCHEMA = (
         {
             cv.GenerateID(CONF_ID): cv.declare_id(LvglComponent),
             cv.GenerateID(df.CONF_DISPLAYS): display_schema,
-            cv.Optional(df.CONF_COLOR_DEPTH, default=16): cv.one_of(1, 16),
+            cv.Optional(df.CONF_COLOR_DEPTH, default=16): cv.one_of(1, 8, 16),
             cv.Optional(df.CONF_DEFAULT_FONT, default="montserrat_14"): lvalid.lv_font,
             cv.Optional(df.CONF_FULL_REFRESH, default=False): cv.boolean,
             cv.Optional(CONF_BUFFER_SIZE, default="100%"): cv.percentage,
